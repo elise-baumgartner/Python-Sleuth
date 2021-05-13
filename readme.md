@@ -9,7 +9,7 @@ is difficult for new users to get started using the model.
 ## Motivation
 The purpose of this project is to adapt the SLEUTH model to improve ease of use and 
 portability to increase the usability of the model for land use or urban modeling 
-simulation. This is done by translating the SLEUTH model into Python. For more information on the project, feel free to browse [the documentation](https://elise-baumgartner.github.io/Python-Sleuth/build/html/installation.html) for this project.
+simulation. This is done by translating the SLEUTH model into Python. For more information on the project, feel free to browse [the documentation](https://elise-baumgartner.github.io/Python-Sleuth/build/html/index.html) for this project.
 
 
 ## Installation
@@ -30,7 +30,7 @@ Accepted Modes:
 * calibrate
 * predict
 
-For more information on how the project runs, visit the Python SLEUTH's [documentation](https://elise-baumgartner.github.io/Python-Sleuth/build/html/installation.html)
+For more information on how the project runs, visit the Python SLEUTH's [documentation](https://elise-baumgartner.github.io/Python-Sleuth/build/html/index.html)
 
 
 
