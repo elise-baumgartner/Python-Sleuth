@@ -28,7 +28,6 @@ class Timer:
         self.start_time = time.perf_counter()
         self.is_running = True
         self.num_calls += 1
-        # print(f"{self.name} is running")
 
     def read(self):
         if not self.is_running:
@@ -41,16 +40,16 @@ class Timer:
             raise TimeError("Timer is not running. Use .start() to start it")
 
         self.stop_time = time.perf_counter()
-        self.total_time = (self.stop_time - self.start_time) * 1000
+        self.total_time += (self.stop_time - self.start_time) * 1000
         self.average_time = self.total_time / self.num_calls
         self.is_running = False
 
     def __str__(self):
-        return f"{self.name:>15s} {self.num_calls:>5}     {self.average_time:>8.2f}      " \
-               f"{self.total_time:>10.2f} = {self.format_total_time()}"
+        return f"{self.name:15s} {self.num_calls:5}     {self.average_time:8.2f}      " \
+               f"{self.total_time:10.2f} = {self.format_total_time()}"
 
     def format_total_time(self):
-        seconds = self.average_time / 1000
+        seconds = self.total_time / 1000
         days = int(seconds / (60 * 60 * 24))
         seconds -= days
 
@@ -60,7 +59,9 @@ class Timer:
         minutes = int(seconds / 60)
         seconds -= minutes
 
-        return f"{days:>4}{hours:>2}{minutes:>2}{seconds:>2}"
+        seconds = int(seconds) % 60
+
+        return f"{days:02d}:{hours:02d}:{minutes:02d}:{seconds:02d}"
 
 
 class TimerUtility:
