@@ -7,7 +7,6 @@ Python SLEUTH documentation
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
 
    installation
    background
